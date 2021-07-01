@@ -29,7 +29,7 @@ def getFrames(filename, frameNum):
 # locates the images and stitches them all either horizontally or vertically
 def stitchImages(frameArr):
     images = [Image.open(x) for x in
-             frameArr]
+              frameArr]
     widths, heights = zip(*(i.size for i in images))
 
     total_height = sum(heights)
@@ -45,6 +45,7 @@ def stitchImages(frameArr):
 
     new_im.save('output.png')
 
+
 # Downloads and stitches
 def getImage():
     print("Enter youtube link: ")
@@ -59,9 +60,8 @@ def getImage():
     numFrames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     print("\nThere are " + str(numFrames) + " frames")
 
-
     multiples = "factors of " + str(numFrames) + ": "
-    for i in range(1,  numFrames + 1):
+    for i in range(1, numFrames + 1):
         if numFrames % i == 0:
             multiples += str(i) + " "
 
@@ -84,5 +84,5 @@ def getImage():
 
     print("Done")
 
-getImage()
 
+getImage()
