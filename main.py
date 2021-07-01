@@ -6,9 +6,7 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import os
-import numpy as np
 import cv2
-from glob import glob
 from PIL import Image
 from natsort import natsorted
 
